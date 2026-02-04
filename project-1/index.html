@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Iron Lady AI Assistant</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
 
+<body>
+
+<!-- MAIN HEADING -->
+<h1 class="main-heading">Iron Lady AI Program Advisor</h1>
+
+<!-- CHATBOT ICON -->
+<div class="chat-icon" onclick="toggleChat()">🤖</div>
+
+<!-- CHATBOT CONTAINER (HIDDEN INITIALLY) -->
+<div class="chat-container" id="chatContainer">
+
+  <h2 class="chat-title">
+    🤖 Iron Lady AI Program Advisor
+    <span class="close-btn" onclick="toggleChat()">✖</span>
+  </h2>
+
+  <!-- QUICK QUESTIONS INSIDE CHAT -->
+  <div class="quick-questions">
+    <button onclick="autoAsk('Which Iron Lady program is best for a college student?')">🎓 College Student</button>
+    <button onclick="autoAsk('How does Iron Lady help women build careers?')">👩‍💼 Career Growth</button>
+    <button onclick="autoAsk('How can Iron Lady help women entrepreneurs?')">🚀 Entrepreneurship</button>
+    <button onclick="autoAsk('What is Iron Lady Foundation?')">🧭 About Iron Lady</button>
+  </div>
+
+  <!-- CHAT BOX -->
+  <div id="chatBox"></div>
+
+  <!-- INPUT -->
+  <input type="text" id="userInput" placeholder="Ask me about Iron Lady programs..." />
+  <button onclick="sendMessage()">Send</button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
